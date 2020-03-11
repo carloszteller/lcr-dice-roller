@@ -1,0 +1,71 @@
+:root {
+    --green: #477148;
+    --l-blue: #0052a1;
+    --c-red: #ee3c33;
+}
+  
+body {
+    background-color: var(--green);
+    color: white;
+}
+  
+.container { height: 100vh;}
+
+.num-dice {
+    background-color: white;
+    border-color: var(--l-blue);
+    color: var(--l-blue);
+}
+.num-dice:hover, .num-dice.active {
+    background-color: var(--l-blue);
+    color: white;
+}
+
+.roll {
+    padding: .375em 2em;
+    background-color: var(--c-red);
+    border: 1px solid var(--c-red); border-radius: .25em;
+    color: white;
+    box-shadow: 0 .25em #771e19;
+    font-size: 2em;
+    display: inline-block;
+    outline: none !important;
+    position: relative;
+    top: 0;
+    transition: all .25s;
+}
+.roll:active {
+    box-shadow: none;
+    top: .25em;
+}
+
+.dice-container { width: 100%; min-height: 75px; }
+.dice {
+    padding: 0;
+    min-width: 75px;
+    background-color: white;
+    border: 1px solid white; border-radius: 10px;
+    color: black;
+    font-size: 2.5em; font-weight: 900;
+    animation: spin_dice .25s;
+}
+.dot::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+}
+.left { color: var(--l-blue); }
+.center { color: var(--c-red); }
+
+@keyframes spin_dice {
+    0% {
+      transform: rotate(0deg);
+      filter: blur(5px);
+    }
+    100% {
+      transform: rotate(360deg);
+      filter: blur(5px);
+    }
+}
