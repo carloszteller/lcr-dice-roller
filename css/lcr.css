@@ -11,6 +11,22 @@ body {
   
 .container { height: 100vh;}
 
+.l-die, .c-die, .r-die {
+    width: 50px; height: 50px;
+    background-color: white;
+    border: 1px solid white; border-radius: 10px;
+    font-weight: 900;
+}
+.l-die {
+    color: var(--l-blue);
+    transform: rotate(-25deg);
+}
+.c-die { color: var(--c-red); }
+.r-die {
+    color: black;
+    transform: rotate(25deg);
+}
+
 .num-dice {
     background-color: white;
     border-color: var(--l-blue);
