@@ -28,9 +28,11 @@ body {
 }
 
 .num-dice {
+    padding: .5em 1em;
     background-color: white;
     border-color: var(--l-blue);
     color: var(--l-blue);
+    font-size: 2em; font-weight: bold;
 }
 .num-dice:hover, .num-dice.active {
     background-color: var(--l-blue);
